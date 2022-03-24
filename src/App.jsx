@@ -1,0 +1,151 @@
+
+import { connect } from 'react-redux';
+import './App.css';
+
+
+
+import {getitems} from "./store/action/action"
+
+function App(props) {
+
+
+
+  return (
+
+    <div className="parent">
+
+
+      <div className="left"></div>
+
+
+
+      <div className="center">
+
+        <div className="search">
+
+
+        </div>
+
+
+
+        <div className="main">
+
+          <span>
+
+
+            <div class="card bg-dark text-white">
+
+              <img src={props.img1} class="card-img" />
+              <div className="card-img-overlay">
+                <h6 className="card-title">{props.name1}</h6>
+                <h6 className='price'>Rs. {props.price1}</h6>
+              </div>
+            </div>
+
+          </span>
+
+
+
+          <span>
+
+            <div class="card bg-dark text-white">
+              <img src={props.img2} class="card-img" />
+              <div class="card-img-overlay">
+              <h6 className="card-title">{props.name2}</h6>
+                <h6 className='price'>Rs. {props.price2}</h6>
+              </div>
+            </div>
+
+          </span>
+
+
+          <span>
+
+            <div class="card bg-dark text-white">
+              <img src={props.img3} class="card-img" />
+              <div class="card-img-overlay">
+              <h6 className="card-title">{props.name3}</h6>
+                <h6 className='price'>Rs. {props.price3}</h6>
+              </div>
+            </div>
+
+          </span>
+
+          <span>
+
+          <div class="card bg-dark text-white">
+              <img src={props.img4} class="card-img" />
+              <div class="card-img-overlay">
+              <h6 className="card-title">{props.name4}</h6>
+                <h6 className='price'>Rs. {props.price4}</h6>
+              </div>
+            </div>
+
+          </span>
+          
+          <span>
+
+          <div class="card bg-dark text-white">
+              <img src={props.img5} class="card-img" />
+              <div class="card-img-overlay">
+              <h6 className="card-title">{props.name5}</h6>
+                <h6 className='price'>Rs. {props.price5}</h6>
+              </div>
+            </div>
+
+          </span>
+          
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+
+      </div>
+
+
+      <div class="right">
+        <button onClick={() => {
+
+          
+          props.getitems()
+
+        }}  >Get Items</button>
+      </div>
+
+    </div>
+
+  );
+}
+
+
+const mapStateToProps = (state) => ({
+  name1: state.name1,
+  price1: state.price1,
+  img1 : state.img1,
+
+  name2 : state.name2,
+  price2 : state.price2,
+  img2 : state.img2,
+
+  name3 : state.name3,
+  price3 : state.price3,
+  img3 : state.img3,
+
+  name4 : state.name4,
+  price4 : state.price4,
+  img4 : state.img4,
+
+  name5 : state.name5,
+  price5 : state.price5,
+  img5 : state.img5,
+})
+
+
+const mapDispatchToProps = (dispatch) => ({
+  getitems : () => dispatch(getitems())
+})
+
+
+export default connect( mapStateToProps, mapDispatchToProps )(App)
+
+
+
