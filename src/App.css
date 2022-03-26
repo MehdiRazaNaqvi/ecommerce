@@ -6,11 +6,13 @@ body{
 .parent{
   width: 100vw;
   height: 100vh;
-  background-color: rgb(218, 218, 218);
+  background-color: rgb(235, 235, 235);
   
   display: flex;
   justify-content: center;
   
+  transition: all 1.5s linear;  
+
 
 }
 
@@ -23,7 +25,7 @@ body{
 
 .center{
   width: 70%;
-  background-color: aqua;
+  /* background-color: aqua; */
   padding: 0;
   margin: 0;
 
@@ -35,14 +37,23 @@ body{
 
 
 .search{
-  background-color: blue;
+  background-color: rgb(255, 255, 255);
+  
   width: 100%;
   height: 20% ;        
+
+  transition: all 1.5s linear ; 
+
 }
 
 
 .main{
-  background-color: rgb(255, 255, 255);
+  transition: all 1.5s linear; 
+
+
+  background-color: rgb(235, 235, 235);
+
+
   width: 100%;
   height: 80% ; 
 
@@ -53,7 +64,8 @@ body{
   column-gap: 5px;
   row-gap: 5px;
 
-  padding: 10px;
+  /* padding: 5px; */
+  padding-top: 5px;
 
 
 }
@@ -83,7 +95,7 @@ span{
 
 
 .card{
-  transition: all 0.7s linear; 
+  transition: all 1.5s linear; 
 }
 
 .card:hover {
@@ -110,16 +122,18 @@ span{
 
 
 .price{
-  color: blue;
+  color: rgb(255, 132, 0);
   font-weight: 200;
-  font-size: xx-small;
+  font-size: x-small;
 }
 
 
 
 
 
-
+span{
+  overflow: hidden;
+}
 
 
 .dark{
@@ -135,7 +149,9 @@ background-color: black;
 .dark .search{
   background-color: rgb(128, 128, 128);
 }
-
-.dark span{
-  background-image: linear-gradient(to right , rgb(60, 60, 60) , rgb(131, 131, 131));
+ 
+.dark .card{
+  
+   background-color: rgb(61, 61, 61);
 }
+
