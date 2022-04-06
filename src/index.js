@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App';
+import App from './router.jsx';
 import reportWebVitals from './reportWebVitals';
 
 import store from "./store/index"

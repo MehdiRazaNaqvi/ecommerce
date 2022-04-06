@@ -59,7 +59,7 @@ function App(props) {
         <div className="main">
           {arr.map((v, i) =>
 
-            <span>
+            <span key={i}>
 
 
               <div className="card">
@@ -73,7 +73,7 @@ function App(props) {
 
             </span>
 
-          )}
+          )} 
 
 
 
