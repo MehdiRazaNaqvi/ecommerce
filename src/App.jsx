@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { connect } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import './App.css';
 
 
@@ -12,11 +13,12 @@ function App(props) {
 
 
   const [lightmode, setmode] = useState(true)
+  let navigate = useNavigate();
 
 
-  console.log(props.data)
+  // console.log(props.data)
   const arr = Object.values(props.data)
-  console.log(arr)
+  // console.log(arr)
 
 
 
@@ -59,7 +61,7 @@ function App(props) {
         <div className="main">
           {arr.map((v, i) =>
 
-            <span key={i}>
+            <span onClick={() => navigate(`/${v.name}`)} key={i}>
 
 
               <div className="card">
