@@ -14,11 +14,12 @@ function App(props) {
 
   const [lightmode, setmode] = useState(true)
   let navigate = useNavigate();
-
+  const [input , setinput] = useState("");
 
   // console.log(props.data)
   const arr = Object.values(props.data)
   // console.log(arr)
+
 
 
 
@@ -45,6 +46,8 @@ function App(props) {
 
           </div>
         </form>
+
+
 
       </div>
 
